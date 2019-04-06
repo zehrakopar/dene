@@ -1,0 +1,13 @@
+  1.       touch .hidden-file
+           ls -a
+  2.       mkdir -p these/folders/are/just/for/fun
+  3.       echo "test" >fun
+           echo "another test" >>fun
+           wc -c fun
+           18 fun
+  4.       echo -n "test" > fun
+           echo "another test" >> fun
+           cat fun
+           testanother test
+
+ 

@@ -1,0 +1,97 @@
+* {margin: 0px; padding:0px;}
+
+body {background-color: rgba(9, 134, 134, 0.719);}
+
+h1, h2 {margin:10px 70px;
+        padding:10px;
+        color: white;
+        text-decoration: underline;
+        animation: 3s 1 alternate slidein;
+}
+
+        @keyframes slidein {
+                   from {margin-left: 100%;
+                         width: 300%;}          
+                   to {margin-left: 0%;
+                        width: 100%;}
+}
+
+h3 {text-align: center;
+    color:  rgba(9, 134, 134, 0.719);
+    text-decoration: underline overline;
+}
+            
+li {list-style: none;
+    box-sizing: border-box;
+    border: 2px rgba(9, 134, 134, 0.719) solid;
+    border-radius: 10%;
+    padding:15px 10px;
+    margin:5px;
+    text-align: center;
+    background-color: white;
+}        
+
+#grid-floats {overflow: hidden;
+              margin: 0px 5px;
+}
+
+#grid-flex {display: flex;
+            flex-flow:wrap row;
+            justify-content: start;
+            margin: 0px 5px;
+
+}
+
+@media(max-width: 480px) {
+    #grid-floats li:nth-child(1){width:calc(100% - 10px);} 
+    #grid-floats li {float:left;
+                     width:calc(50% - 10px);
+                     height:25em;}
+    img {width: 70%;}
+    img:hover {width: 75%}
+    #grid-flex li:nth-child(1){width:calc(100% - 10px);} 
+    #grid-flex li {flex-grow: 0;
+                 width:calc(50% - 10px);
+                 height:25em;}
+}
+
+@media(min-width:481px) and (max-width:1024px) {
+    #grid-floats li:nth-child(-n+2) {width:calc(50% - 10px);}
+    #grid-floats li {float: left;
+                     width:calc(100%/3 - 10px);
+                     height: 30em;}
+    img {width: 80%;}
+    img:hover {width: 85%}
+    #grid-flex li:nth-child(-n+2) {width:calc(50% - 10px);}
+    #grid-flex li {flex-grow: 1;
+                    width:calc(100%/3 - 10px);
+                    height: 30em;}
+}
+
+@media(min-width:1025px) {
+    #grid-floats li:nth-child(1){width:calc(50% - 10px);
+                                 border-radius: 7%;}
+    #grid-floats li {float: left;    
+                     width:calc(25% - 10px);
+                     height: 27em;}
+    img {width: 60%;}
+    img:hover {width: 61%}
+    #grid-flex li:nth-child(1){width:calc(50% - 10px);
+                               border-radius: 7%;}
+    #grid-flex li {flex-grow: 0;  
+                   width:calc(25% - 10px);
+                   height: 27em;}
+}
+  
+
+
+
+
+
+
+
+   
+        
+
+
+                
